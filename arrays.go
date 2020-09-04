@@ -1,6 +1,6 @@
 package goUtils
 
-func reverseArrayString(input []string) (reverse []string) {
+func ReverseArrayString(input []string) (reverse []string) {
 
 	reverse = make([]string, len(input))
 

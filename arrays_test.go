@@ -12,7 +12,7 @@ func TestReverseArrayString(t *testing.T) {
 
 	for i, test := range testValues {
 
-		if got := reverseArrayString(test); !reflect.DeepEqual(got, wantValues[i]) {
+		if got := ReverseArrayString(test); !reflect.DeepEqual(got, wantValues[i]) {
 
 			t.Errorf("Wanted %v but got %v", wantValues[i], got)
 
