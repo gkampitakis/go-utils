@@ -1,3 +1,3 @@
-module github.com/gkampitakis/go-utils
+module github.com/gkampitakis/goUtils
 
 go 1.15

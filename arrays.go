@@ -1,4 +1,4 @@
-package arrays
+package goUtils
 
 func reverseArrayString(input []string) (reverse []string) {
 
