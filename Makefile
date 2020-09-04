@@ -1,5 +1,6 @@
 test: 
-	go test
+	go vet ./...
+	go test ./...
 
 tidyDeps:
 	go mod tidy

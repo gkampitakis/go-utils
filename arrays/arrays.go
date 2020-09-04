@@ -1,7 +1,5 @@
 package arrays
 
-import q3 "rsc.io/quote/v3"
-
 func reverseArrayString(input []string) (reverse []string) {
 
 	reverse = make([]string, len(input))
@@ -14,12 +12,4 @@ func reverseArrayString(input []string) (reverse []string) {
 
 	return
 
-}
-
-func Proverb() string {
-	return q3.Concurrency()
-}
-
-func HelloWorld() string {
-	return q3.HelloV3()
 }

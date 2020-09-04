@@ -21,27 +21,3 @@ func TestReverseArrayString(t *testing.T) {
 	}
 
 }
-
-func TestHelloWorld(t *testing.T) {
-
-	want := "Hello, world."
-
-	if got := HelloWorld(); got != want {
-
-		t.Errorf("Wanted %v but got %v", want, got)
-
-	}
-
-}
-
-func TestProverb(t *testing.T) {
-
-	want := "Concurrency is not parallelism."
-
-	if got := Proverb(); got != want {
-
-		t.Errorf("Wanted %v but got %v", want, got)
-
-	}
-
-}
