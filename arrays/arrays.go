@@ -6,6 +6,7 @@ func ReverseArrayString(input []string, modify bool) (reverse []string) {
 		reverse = input
 	} else {
 		reverse = make([]string, len(input))
+		copy(reverse, input)
 	}
 
 	for i, j := 0, len(input)-1; i < len(input)/2; i, j = i+1, j+1 {
