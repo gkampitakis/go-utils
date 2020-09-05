@@ -1,4 +1,4 @@
-package goUtils
+package arrays
 
 import (
 	"reflect"
@@ -12,7 +12,9 @@ func TestReverseArrayString(t *testing.T) {
 
 	for i, test := range testValues {
 
-		if got := ReverseArrayString(test); !reflect.DeepEqual(got, wantValues[i]) {
+		got := ReverseArrayString(test, true)
+
+		if !reflect.DeepEqual(got, wantValues[i]) {
 
 			t.Errorf("Wanted %v but got %v", wantValues[i], got)
 
