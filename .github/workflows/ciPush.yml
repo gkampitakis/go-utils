@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go: [1.x]
+    name: Go version ${{matrix.go}}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup go
+        uses: actions/setup-go@v2
+        with:
+          go-version: ${{matrix.go}}
+      - name: Run Tests
+        run: make test
+  publish:
+    runs-on: ubuntu-latest
+    name: Publish Go Module
+    steps:
+      - uses: actions/checkout@v2
+      - run: make getVersion

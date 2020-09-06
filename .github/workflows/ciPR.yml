@@ -1,9 +1,6 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - master
   pull_request:
     branches:
       - master
@@ -23,12 +20,3 @@ jobs:
           go-version: ${{matrix.go}}
       - name: Run Tests
         run: make test
-  publish:
-    on:
-      push:
-        branches:
-          - test
-    runs-on: ubuntu-latest
-    name: Test
-    steps:
-      - run: make getVersion
