@@ -16,5 +16,10 @@ listDeps:
 	go list -m all
 
 print:
-	cat Makefile
+	@cat Makefile
 
+clean: 
+	rm coverage.out
+
+getVersion:
+	@tail -n 1 go.mod |  cut -f2 -d":" | cut -c2-
